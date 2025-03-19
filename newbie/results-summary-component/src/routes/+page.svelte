@@ -46,13 +46,13 @@
 	}
 </script>
 
-<div class="md:bg-very-light-blue md:items-center min-h-svh md:flex">
+<div class="md:bg-very-light-blue min-h-svh md:flex md:items-center">
 	<div
 		class=" m-auto flex flex-col items-center justify-center gap-4 bg-white sm:w-[min(80%,46rem)] md:flex-row md:rounded-4xl"
 	>
 		<ResultCard {...result} />
 		<div class="flex w-full flex-col gap-6 p-8 md:gap-10 md:px-10 md:py-0">
-			<h2 class="text-heading-m -mb-4 text-dark-navy font-bold">Summary</h2>
+			<h2 class="text-heading-m text-dark-navy -mb-4 font-bold">Summary</h2>
 			<div class="grid gap-4">
 				{#each categories as item}
 					<SummaryItem {...item} />
