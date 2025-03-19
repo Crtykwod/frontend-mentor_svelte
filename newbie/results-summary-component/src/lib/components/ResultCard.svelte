@@ -13,7 +13,7 @@
 	<div
 		class="bg-gradient-2 mb-6 flex size-36 flex-col items-center justify-center rounded-full md:size-52"
 	>
-		<span class="text-5xl font-bold">{score}</span>
+		<span class="text-heading-xl font-bold">{score}</span>
 		<span class="text-light-blue opacity-50">of {maxScore}</span>
 	</div>
 

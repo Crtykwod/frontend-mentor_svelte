@@ -52,7 +52,7 @@
 	>
 		<ResultCard {...result} />
 		<div class="flex w-full flex-col gap-6 p-8 md:gap-10 md:px-10 md:py-0">
-			<h2 class="text-heading-m text-dark-navy font-bold">Summary</h2>
+			<h2 class="text-heading-m -mb-4 text-dark-navy font-bold">Summary</h2>
 			<div class="grid gap-4">
 				{#each categories as item}
 					<SummaryItem {...item} />
