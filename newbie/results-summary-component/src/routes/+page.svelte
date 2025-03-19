@@ -46,7 +46,7 @@
 	}
 </script>
 
-<div class="md:bg-very-light-blue md:items-centermin-h-svh md:flex">
+<div class="md:bg-very-light-blue md:items-center min-h-svh md:flex">
 	<div
 		class=" m-auto flex flex-col items-center justify-center gap-4 bg-white sm:w-[min(80%,46rem)] md:flex-row md:rounded-4xl"
 	>
