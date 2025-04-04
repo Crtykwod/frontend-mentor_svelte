@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { updateCart } from "$lib/stores/cartStore";
+	import { updateCart } from '$lib/stores/cartStore';
 
-  export let dessert;
+	export let dessert;
 </script>
 
 <button

@@ -1,25 +1,24 @@
 <script lang="ts">
-  import { updateCart } from "$lib/stores/cartStore";
-	import type { Dessert } from "$lib/stores/desserts";
+	import { updateCart } from '$lib/stores/cartStore';
+	import type { Dessert } from '$lib/stores/desserts';
 
-  export let dessert: Dessert;
+	export let dessert: Dessert;
 
 	let quantity: number = 0;
-  let inputValue: string = '0';
+	let inputValue: string = '0';
 
-  function handleInput(event: Event) {
-    const value = (event.target as HTMLInputElement)?.value;
+	function handleInput(event: Event) {
+		const value = (event.target as HTMLInputElement)?.value;
 
-    inputValue = value;
-    
-    if (value !== "") quantity = Number(value);
-    updateCart(dessert, Number(value))
-  }
+		inputValue = value;
 
-  function handleBlur() {
-    if  (inputValue === "" || inputValue === "0") quantity = 0
-  }
+		if (value !== '') quantity = Number(value);
+		updateCart(dessert, Number(value));
+	}
 
+	function handleBlur() {
+		if (inputValue === '' || inputValue === '0') quantity = 0;
+	}
 </script>
 
 {#if quantity === 0}
@@ -27,7 +26,7 @@
 		class="text-body-sm hover:border-red hover:text-red inline-flex w-full max-w-40 gap-2 rounded-full border-2 border-rose-400 bg-white px-6 py-3 font-medium text-rose-900 transition-colors duration-150 ease-in-out select-none hover:cursor-pointer"
 		onclick={() => {
 			quantity++;
-      updateCart(dessert, quantity)
+			updateCart(dessert, quantity);
 		}}
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"
@@ -43,7 +42,7 @@
 
 {#if quantity > 0}
 	<div
-		class="text-body-sm bg-red border-red inline-flex w-full max-w-40 justify-between rounded-full border-2 px-3 py-3 font-medium text-white select-none hover:cursor-pointer button-hover"
+		class="text-body-sm bg-red border-red button-hover inline-flex w-full max-w-40 justify-between rounded-full border-2 px-3 py-3 font-medium text-white select-none hover:cursor-pointer"
 	>
 		<button
 			class="hover:fill-red flex size-5 items-center justify-center rounded-full border border-white fill-white hover:cursor-pointer hover:bg-white"
@@ -63,13 +62,22 @@
 			min="0"
 			value={quantity}
 			oninput={handleInput}
-      onblur={handleBlur}
-      onkeydown={(e) => {
-        const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Tab', 'Enter'];
-        if (!/[0-9]/.test(e.key) && !allowedKeys.includes(e.key)) {
-          e.preventDefault()
-        }
-      }}
+			onblur={handleBlur}
+			onkeydown={(e) => {
+				const allowedKeys = [
+					'Backspace',
+					'Delete',
+					'ArrowLeft',
+					'ArrowRight',
+					'ArrowUp',
+					'ArrowDown',
+					'Tab',
+					'Enter'
+				];
+				if (!/[0-9]/.test(e.key) && !allowedKeys.includes(e.key)) {
+					e.preventDefault();
+				}
+			}}
 		/>
 		<button
 			class="hover:fill-red flex size-5 items-center justify-center rounded-full border border-white fill-white hover:cursor-pointer hover:bg-white"

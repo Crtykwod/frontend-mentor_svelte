@@ -6,14 +6,13 @@
 
 	$: totalPrice = $cartStore.reduce((acc, item) => acc + item.quantity * item.dessert.price, 0);
 
-  function handleConfirmOrder() {
+	function handleConfirmOrder() {
 		const event = new CustomEvent('confirmOrder', {
 			bubbles: true,
 			composed: true
 		});
 		dispatchEvent(event);
 	}
-
 </script>
 
 <div class="text-body-sm m-6 grid gap-6 rounded-xl bg-white p-6 text-rose-900 lg:max-w-sm">
@@ -41,9 +40,9 @@
 
 	<button
 		class="bg-red text-body-md button-hover w-full rounded-full py-4 font-semibold text-white hover:cursor-pointer"
-    onclick={() => {
-      handleConfirmOrder();
-    }}
+		onclick={() => {
+			handleConfirmOrder();
+		}}
 	>
 		Confirm Order
 	</button>
