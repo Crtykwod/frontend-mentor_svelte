@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  src: url('/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: italic;
+  src: url('/fonts/RedHatText-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@theme {
+  /* Colors: */
+  --color-red: hsl(14, 86%, 42%);
+  --color-green: hsl(159, 69%, 38%);
+
+  --color-rose-900: hsl(14, 65%, 9%);
+  --color-rose-500: hsl(12, 20%, 44%);
+  --color-rose-400: hsl(7, 20%, 60%);
+  --color-rose-300: hsl(14, 25%, 72%);
+  --color-rose-100: hsl(13, 31%, 94%);
+  --color-rose-50: hsl(20, 50%, 98%);
+
+  /* Typography: */
+  --text-heading-lg: 2.5rem;
+  --text-heading-lg-line-height: 1.2;
+  --text-heading-sm: 1.5rem;
+  --text-heading-sm-line-height: 1.25;
+  --text-body-md: 1rem;
+  --text-body-md-line-height: 1.5;
+  --text-body-sm: 0.875rem;
+  --text-body-sm-line-height: 1.5;
+
+  /* Spacing */
+  --spacing-50: .25rem;
+  --spacing-100: .5rem;
+  --spacing-150: .75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-1100: 5.5rem;
+}
+
+@layer base {
+  html {
+    font-family: 'Red Hat Text', sans-serif;
+  }
+
+  .button-hover:hover {
+    box-shadow: inset 0 0 999px rgba(0, 0, 0, 0.1);
+  }
+}
