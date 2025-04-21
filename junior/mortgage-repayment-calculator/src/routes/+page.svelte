@@ -147,9 +147,9 @@
   
   <div class="bg-white sm:rounded-b-3xl lg:rounded-bl-none lg:rounded-r-3xl">
     <div class="bg-slate-900 text-slate-300 sm:rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-[80px] h-full">
-      <div class="flex flex-col {!formResult? "items-center gap-4 sm:" : "gap-6 sm:gap-10"} py-8 px-6 sm:p-10">
-        {#if !formResult}
-            <img src="/images/illustration-empty.svg" alt="" />
+      <div class="flex flex-col {!formResult? "items-center gap-4 sm:" : "justify-center h-full gap-6 sm:gap-10"} py-8 px-6 sm:p-10">
+        {#if !formResult.monthlyPayment && !formResult.totalRepayment}
+            <img src="/images/illustration-empty.svg" alt="" class="max-h-[200px]" />
             <h2 class="text-subheading text-center font-bold text-white">Results shown here</h2>
             <p class="text-body-md text-center font-medium">
               Complete the form and click "calculate repayments" to see what your monthly repayments would
